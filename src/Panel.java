@@ -15,6 +15,8 @@ public class Panel extends JPanel implements ActionListener {
 	int x = 0;
 	int y = 0;
 	
+	int randEnemy;
+	
 	Panel(){
 		
 		this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
@@ -33,8 +35,14 @@ public class Panel extends JPanel implements ActionListener {
 	}
 	
 	public void getRandomEnemy() {
-			
-		int randEnemy = (int) (Math.random() * 8);
+		
+	    int n = (int) (Math.random() * 8);
+	    while (n == randEnemy || n > 8) {
+	    	n = (int) (Math.random() * 8);
+	        n += 1;
+	    }
+	    
+	    randEnemy = n;
 		enemy = new ImageIcon("img/dvd" + randEnemy + ".png").getImage();
 	}
 
