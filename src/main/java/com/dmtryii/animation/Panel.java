@@ -22,7 +22,7 @@ public class Panel extends JPanel implements ActionListener {
     Panel(){
         this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
         this.setBackground(Color.black);
-        enemy = new ImageIcon(ConfigApp.imagesPath + "dvd0.png").getImage();
+        enemy = new ImageIcon(ConfigApp.imagesPath + "bv0.png").getImage();
         timer = new Timer(10, this);
         timer.start();
     }
@@ -42,7 +42,7 @@ public class Panel extends JPanel implements ActionListener {
         }
 
         randEnemy = n;
-        enemy = new ImageIcon(ConfigApp.imagesPath + "dvd" + randEnemy + ".png").getImage();
+        enemy = new ImageIcon(ConfigApp.imagesPath + "bv" + randEnemy + ".png").getImage();
     }
 
     @Override
